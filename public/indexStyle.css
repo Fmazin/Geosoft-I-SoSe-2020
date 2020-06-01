@@ -1,0 +1,122 @@
+body {
+  text-align:center;
+  font-family:helvetica;
+}
+
+.map{
+  height:400px;
+  width:600px;
+  position:absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+#mapDraw{
+  height:300px;
+  width:300px;
+  position: relative;;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.input{
+  font-size: 12px;
+  width:300px;
+  height:150px;
+  resize: none;
+}
+
+.selector{
+  font-size: 12px;
+  width:300px;
+}
+
+table{
+  width: 10%;
+  font-size:12px;
+  margin:auto;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #009FE3;
+  color: white;
+}
+
+.below{
+  position: absolute;
+  top: 510px; 
+  position:absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.width{
+  font-size: 12px;
+  width:10%
+}
+
+#databaseShow{
+  text-align: left;
+  width:250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+fieldset{
+  border-style: none;
+}
+
+#departureTable{
+  padding: 15px;
+}
+
+.plaintable{
+  font-family: Helvetica;
+  font-size: 12px;
+}
+
+.posManager{
+  width:50%;
+}
+
+.posManager th{
+  background-color: #313131;
+  color: white;
+}
+
+.posManager th, td{
+  width:25%;
+}
+
+
+#refreshDB{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.errtxt{
+  font-size:15px;
+  text-align: center;
+  color: darkred; 
+}
+
+#aboveMap td{
+  width:200px;
+}
+
+

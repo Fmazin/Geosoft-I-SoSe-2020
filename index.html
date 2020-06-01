@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <meta charset="utf-8">
+      <head>
+        <title>GS 1 Ex V Fermazin</title>
+        <!-- Loading of the JS files -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="public/coordinateFunctions.js"></script>
+        <script src="public/geoJsonFunctions.js"></script>
+        <!--A little bit of ease for the eye-->
+        <link rel="stylesheet" type="text/css" href="public/indexStyle.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+              integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+              crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+              integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+              crossorigin=""></script>
+      </head>
+      <body>
+        <h1>GS 1 Exercise V</h1>
+        <h3>By Fabian Fermazin</h3>
+        <table id="aboveMap">
+          <tr>
+            <td>
+              <form id="databaseShow"></form>
+              <button id="refreshDB" onclick="loadPositions()">Refresh</button>
+            </td>
+            <td id="departureTable">
+            </td>
+          </tr>
+        </table>
+        <div id="mapid" class="map"></div>
+      </body>
+      <script src="public/indexInteraction.js"></script>
+      <script src="public/leafletFunctions.js"></script>
+      <script src="public/leafletInteraction.js"></script>
+      <script src="public/expressFunctions.js"></script>
+    </html>
