@@ -72,10 +72,6 @@ app.get('/database',
          (req,res) => res.sendFile(__dirname + `\\dataManagement.html`)
 );
 
-app.get('/heat',
-         (req,res) => res.sendFile(__dirname + `\\heat.html`)
-);
-
 
 /**
  * A sites which shows the positions database as a JSON Array in your browser.
