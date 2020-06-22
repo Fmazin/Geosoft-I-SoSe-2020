@@ -1,4 +1,4 @@
-Welcome to my submission for Exercise 5.
+Welcome to my submission for Exercise 6.
 
 How start the project:
 
