@@ -1,26 +1,34 @@
-body {
-  text-align:center;
-  font-family:helvetica;
+html {
+  font-size: 1rem;
+  position: relative;
+  min-height: 100%;
 }
 
-.map{
-  height:400px;
-  width:600px;
-  position:absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
+body {
+    margin: 0 0 100px;
+    padding-bottom: 0.5rem;
+}
+
+#mapid{
+  height:350px;
+  width: 100%;
+  position: relative;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#heatMap{
+  height:450px;
+  width: 100%;
+  position: relative;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 #mapDraw{
   height:300px;
-  width:300px;
-  position: relative;;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
+  width: 300px;
+  right:0;
 }
 
 .input{
@@ -32,7 +40,7 @@ body {
 
 .selector{
   font-size: 12px;
-  width:300px;
+  width:250px;
 }
 
 table{
@@ -55,24 +63,11 @@ th {
 
 .below{
   position: absolute;
-  top: 510px; 
-  position:absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-}
-
-.width{
-  font-size: 12px;
-  width:10%
+  top: 510px;
 }
 
 #databaseShow{
   text-align: left;
-  width:250px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 15px;
 }
 
@@ -112,11 +107,37 @@ fieldset{
 .errtxt{
   font-size:15px;
   text-align: center;
-  color: darkred; 
+  color: darkred;
 }
 
 #aboveMap td{
   width:200px;
 }
 
+#geocodeForm{
+  position: relative;
+  left:0;
+}
 
+.mapRow{
+  padding: 3.0rem 0;
+}
+
+#footerRow{
+  bottom:0;
+}
+
+footer{
+  position:absolute;
+  color: white;
+  overflow: hidden;
+  left: 0;
+  bottom: 0;
+  height: 15%;
+  width: 100%;
+  font-size:0.75rem;
+}
+
+#siteNotice{
+  padding:1rem;
+}
