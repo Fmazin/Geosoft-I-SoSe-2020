@@ -1,35 +1,72 @@
 <!DOCTYPE html>
   <html lang="en">
-    <meta charset="utf-8">
       <head>
-        <title>GS 1 Ex V Fermazin</title>
+        <title>GS 1 Ex VI Fermazin</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Loading of the JS files -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+        <script src="jquery/dist/jquery.js"></script>
         <script src="public/coordinateFunctions.js"></script>
         <script src="public/geoJsonFunctions.js"></script>
-        <!--A little bit of ease for the eye-->
         <link rel="stylesheet" type="text/css" href="public/indexStyle.css">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-              integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-              crossorigin=""/>
-        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-              integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-              crossorigin=""></script>
+
+        <link rel="stylesheet" href="leaflet/dist/leaflet.css">
+        <script src="leaflet/dist/leaflet.js"></script>
+        <script src="leaflet-heat/dist/leaflet-heat.js"></script>
+        <script src="bootstrap/dist/js/bootstrap.js"></script>
+
       </head>
       <body>
-        <h1>GS 1 Exercise V</h1>
-        <h3>By Fabian Fermazin</h3>
-        <table id="aboveMap">
-          <tr>
-            <td>
-              <form id="databaseShow"></form>
-              <button id="refreshDB" onclick="loadPositions()">Refresh</button>
-            </td>
-            <td id="departureTable">
-            </td>
-          </tr>
-        </table>
-        <div id="mapid" class="map"></div>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">GS 1 Exercise VI<br>By Fabian Fermazin</a>
+              </div>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="nav navbar-nav">
+                  <li class="nav-item active"><a class="nav-link" href="#">Main Map</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/database">Database Management</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="container-fluid">
+            <div class="row" id="selectRow">
+              <div class="col-sm-3"></div>
+              <div class="col-sm-3" id="selectDiv">
+                  <form id="databaseShow"></form>
+                  <button id="refreshDB" onclick="loadPositions()">Refresh</button>
+              </div>
+              <div class="col-sm-3" id="deparDiv">
+                <div id="departureTable" class="text-center"></div>
+              </div>
+              <div class="col-sm-3"></div>
+            </div>
+              <div class="row mapRow">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                  <div class="align-content-center">
+                    <div id="mapid"></div>
+                  </div>
+                </diV>
+                <div class="col-sm-3"></div>
+              </div>
+            </div>
+            <footer class="bg-dark" id="footer">
+              <div class="text-center">
+                  <p id="siteNotice">
+                    Geosoft Exercise 6<br>
+                    Fabian Fermazin<br>
+                    Muenster, Germany<br>
+                    Check the <a href="https://github.com/Fmazin/GS-1-Ex-V">Github Repository</a><br>
+                    These are Frameworks used: Bootstrap, Express, Jquery, Leaflet, MongoDB
+                  </p>
+              </div>
+            </footer>
       </body>
       <script src="public/indexInteraction.js"></script>
       <script src="public/leafletFunctions.js"></script>
