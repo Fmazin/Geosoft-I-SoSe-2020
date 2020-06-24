@@ -7,5 +7,3 @@ How start the project:
 3. Our node and the mongodb container will loaded
 
 Check out our repository https://hub.docker.com/repository/docker/gaffko/exercise-vii on dockerhub
-
-test
