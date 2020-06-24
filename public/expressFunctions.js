@@ -10,7 +10,7 @@ createManagement();
  */
 function getPositionData(){
     var positionData = $.ajax({ //requesting a list of all positions in the database
-        url:        "http://localhost:5000/position",
+        url:        "http://localhost:3000/position",
         dataType:   "json",
         success:    console.log("Positions data from DB successfully loaded"),
         error:      function (xhr) {
@@ -111,7 +111,7 @@ function updatePositions(dataset){
     var nCoor = $("#"+dataset._id+"_coordinates").val();
 
     if(nName !== "" && checkCoorArray(nCoor)){
-        var request="http://localhost:5000/update?id="+dataset._id+"&name="+nName+"&coor=["+nCoor+"]"
+        var request="http://localhost:3000/update?id="+dataset._id+"&name="+nName+"&coor=["+nCoor+"]"
             $.ajax({
                 url:        request,
                 success:    console.log("Update succesfull."),
@@ -135,7 +135,7 @@ function deletePositions(dataset){
     $("#managerError").html("");
     var nName = $("#"+dataset._id+"_name").val();
 
-    var request = "http://localhost:5000/delete?id="+dataset._id
+    var request = "http://localhost:3000/delete?id="+dataset._id
     var delReq  = $.ajax({
                         url:        request,
                         success:    console.log("Update succesfull."),
@@ -163,7 +163,7 @@ function addPositions(){
     var aCoor = $("#addCoor").val();
 
     if(aName !== "" && checkCoorArray(aCoor)){
-        var request = "http://localhost:5000/add?id="+aId+"&name="+aName+"&coor=["+aCoor+"]"
+        var request = "http://localhost:3000/add?id="+aId+"&name="+aName+"&coor=["+aCoor+"]"
         var addReq  = $.ajax({
                             url:        request,
                             success:    console.log("Addition succesfull."),

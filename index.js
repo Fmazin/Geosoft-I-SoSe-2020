@@ -1,11 +1,15 @@
 const express = require('express');
-const mongodb = require('mongodb');
-const app     = express();
-const port    = 5000;
 
+const app     = express();
+const port    = 3000;
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+const mongodb = require('mongodb');
 /**
  * The folders that are used in the express app.
  */
+
 app.use('/public', express.static(__dirname +'/public'));
 app.use('/jquery', express.static(__dirname+'/node_modules/jquery'));
 app.use('/leaflet', express.static(__dirname+'/node_modules/leaflet'));
@@ -28,7 +32,7 @@ var startPoints = [
  */
 async function connectMongoDB(){
     try{
-        app.locals.dbConnection = await mongodb.MongoClient.connect("mongodb://localhost:27017/points", {useNewUrlParser: true, useUnifiedTopology: true});
+        app.locals.dbConnection = await mongodb.MongoClient.connect("mongodb://mongodbservice:27017", {useNewUrlParser: true, useUnifiedTopology: true});
         app.locals.db = await app.locals.dbConnection.db("points"); //Creation of the database
         console.log("Using db: " + app.locals.db.databaseName);
         createPositions(app.locals.db);
@@ -62,14 +66,14 @@ connectMongoDB();
  * Main Site of the App. Sends the index.html file.
  */
 app.get('/',
-         (req,res) => res.sendFile(__dirname + '\\index.html')
+         (req,res) => res.sendFile(__dirname + '/index.html')
 );
 
 /**
  * Database management Site. Sends the dataManagement.html file.
  */
 app.get('/database',
-         (req,res) => res.sendFile(__dirname + `\\dataManagement.html`)
+         (req,res) => res.sendFile(__dirname + `/dataManagement.html`)
 );
 
 
