@@ -61,7 +61,7 @@ function getDistance(lat1, lon1, lat2, lon2 ) {
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 
   var d = R * c;
-  return d;
+  return Math.abs(d);
 
 }
 
@@ -99,7 +99,7 @@ function getBearing(lat1, lon1, lat2, lon2){
 *                   pair of coordinates.
 *@param pointList The position of the stations. Should be a list of
 *                 coordinate pairs.
-*@return A sorted List by distance of the stopnames, stopnumbers, distances in meters and bearing in cardinal direction of the clostest stop 
+*@return A sorted List by distance of the stopnames, stopnumbers, distances in meters and bearing in cardinal direction of the clostest stop
 */
 function getDistanceList(singlePoint, pointList){
   var distanceList = [];
@@ -113,7 +113,7 @@ function getDistanceList(singlePoint, pointList){
   }
 
   distanceList.sort(function(a,b){return a[2]-b[2];});
-  
+
   return distanceList[0];
 }
 
@@ -176,3 +176,12 @@ function getCardinalDir(bearing){
   }
   return cardinal;
 }
+
+/**
+* Took this from the streuselcake example to get the functions available in the test.js
+*/
+if(typeof exports == "undefined"){
+  var exports = window;
+}
+exports.getDistance = getDistance;
+exports.getBearing = getBearing;
