@@ -7,3 +7,8 @@ How start the project:
 3. Our node and the mongodb container will loaded
 
 Check out our repository https://hub.docker.com/repository/docker/gaffko/exercise-vii on dockerhub
+
+Testing:
+Unfortunately we could not figure how start this with the doker Version of the
+Programm. So for this will have to download the git repository normally.
+And run npm install, test respectively.   
